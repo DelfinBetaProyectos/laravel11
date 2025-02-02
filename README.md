@@ -10,6 +10,8 @@ WebApp BookX
 * _Jetstream 5.3_
 * _Tailwindcss ^3.4.0._
 * _Flowbite 2.5.2._
+* _Bouncer 1.0._
+* _Laravel Auditing 13.6_
 
 ## Autores
 

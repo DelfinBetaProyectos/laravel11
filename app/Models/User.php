@@ -12,9 +12,10 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use OwenIt\Auditing\Contracts\Auditable;
 use Silber\Bouncer\Database\HasRolesAndAbilities;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Auditable
 {
     use HasApiTokens;
 
@@ -24,6 +25,8 @@ class User extends Authenticatable
     use HasRolesAndAbilities;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use SoftDeletes;
+    use \OwenIt\Auditing\Auditable;
 
     /**
      * The attributes that are mass assignable.
@@ -89,7 +92,8 @@ class User extends Authenticatable
     {
         $query->where(function (Builder $query) use ($search) {
             $query->where('firstname', 'like', '%'.$search.'%')
-                  ->orWhere('lastname', 'like', '%'.$search.'%');
+                  ->orWhere('lastname', 'like', '%'.$search.'%')
+                  ->orWhere('email', 'like', '%'.$search.'%');
         });
     }
 }
