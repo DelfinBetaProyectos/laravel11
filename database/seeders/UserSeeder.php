@@ -22,6 +22,8 @@ class UserSeeder extends Seeder
       'password' => Hash::make('dayan123')
     ]);
 
+    $user->assign('admin');
+
     // Alfredo - Admin
     $user = User::factory()->create([
       'firstname' => 'Alfredo',
@@ -29,5 +31,7 @@ class UserSeeder extends Seeder
       'email' => 'alfredo@kubilabs.com',
       'password' => Hash::make('alfredo123')
     ]);
+
+    $user->assign('admin');
   }
 }

@@ -14,7 +14,7 @@
           </div>
           <div class="md:col-span-5">
             <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">¡Bienvenido al Sistema de BookX!</h1>
-            <p class="text-lg font-semibold dark:text-white">{{ Auth::user()->fullname }}</p>
+            <p class="text-lg font-semibold dark:text-white">Admin: {{ Auth::user()->fullname }}</p>
           </div>
         </div>
         <hr class="my-6" />

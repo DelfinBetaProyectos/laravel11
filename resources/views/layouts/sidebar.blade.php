@@ -1,7 +1,7 @@
 @php
   $route_dashboard = 'dashboard';
-  // if (Auth::user()->isAn('admin')) { $route_dashboard = 'admin.dashboard'; }
-  // if (Auth::user()->isAn('manager')) { $route_dashboard = 'manager.dashboard'; }
+  if (Auth::user()->isAn('admin')) { $route_dashboard = 'admin.dashboard'; }
+  if (Auth::user()->isAn('manager')) { $route_dashboard = 'manager.dashboard'; }
 @endphp
 <aside id="drawer-sidebar-navigation" aria-labelledby="drawer-sidebar-navigation-label" class="fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700">
   <div class="h-full overflow-y-auto p-4 pb-16">
@@ -44,7 +44,7 @@
             <span class="ms-3">Dashboard</span>
           </a>
         </li>
-        {{-- @if (Auth::user()->isAn('admin')) --}}
+        @if (Auth::user()->isAn('admin'))
           <li>
             <div class="menu-icon hidden p-2 hover:bg-gray-100">
               <svg class="flex-shrink-0 w-5 h-5 transition duration-75 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
@@ -95,7 +95,7 @@
               <span class="flex-1 ms-3 whitespace-nowrap">{{ __('Audit') }}</span>
             </a>
           </li>
-        {{-- @endif --}}
+        @endif
         <!-- <li>
           <div class="menu-icon hidden p-2 hover:bg-gray-100">
             <svg class="flex-shrink-0 w-5 h-5 transition duration-75 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">

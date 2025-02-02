@@ -12,6 +12,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Silber\Bouncer\Database\HasRolesAndAbilities;
 
 class User extends Authenticatable
 {
@@ -20,6 +21,7 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
     use HasProfilePhoto;
+    use HasRolesAndAbilities;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
