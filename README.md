@@ -1,6 +1,6 @@
-# BookX
+# Laravel 11
 
-WebApp BookX
+Dashboard Base en Laravel 11
 
 ## Requerimientos
 
@@ -18,4 +18,3 @@ WebApp BookX
 _Desarrollado por DelfinBeta_
 
 * **Dayan Betancourt** - *Desarrolladora Web* - [delfinbeta](https://github.com/delfinbeta)
-* **Alfredo Cubillos** - *Diseñador*
