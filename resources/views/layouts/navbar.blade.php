@@ -149,12 +149,12 @@
           <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
         </svg>
       </div>
-      <span class="px-2 hidden lg:block">{{ Auth::user()->name }}</span>
+      <span class="px-2 hidden lg:block">{{ Auth::user()->fullname }}</span>
     </button>
     <!-- Dropdown Menu -->
     <div id="user-dropdown" class="hidden overflow-hidden z-50 my-4 max-w-sm list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl">
       <div class="py-3 px-4">
-        <span class="block text-sm font-semibold dark:text-white">{{ Auth::user()->name }}</span>
+        <span class="block text-sm font-semibold dark:text-white">{{ Auth::user()->fullname }}</span>
         <span class="block text-sm truncate dark:text-white">{{ Auth::user()->email }}</span>
       </div>
       <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">

@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="text-center">
-        <p class="text-lg font-semibold">{{ Auth::user()->name }}</p>
+        <p class="text-lg font-semibold">{{ Auth::user()->fullname }}</p>
         <p><a href="{{ route('profile.show') }}" class="text-sm hover:underline">View Profile</a></p>
       </div>
     </div>

@@ -17,10 +17,14 @@ class DatabaseSeeder extends Seeder
   {
     // User::factory(10)->create();
 
-    User::factory()->create([
-      'name' => 'Dayan Betancourt',
-      'email' => 'dayan@kubilabs.com',
-      'password' => Hash::make('dayan123')
+    // User::factory()->create([
+    //   'name' => 'Dayan Betancourt',
+    //   'email' => 'dayan@kubilabs.com',
+    //   'password' => Hash::make('dayan123')
+    // ]);
+
+    $this->call([
+      UserSeeder::class
     ]);
   }
 }
