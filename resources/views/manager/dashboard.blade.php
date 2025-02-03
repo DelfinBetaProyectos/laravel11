@@ -9,7 +9,7 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div class="p-6 bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
         <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
-          <div class="bg-itfip-light rounded p-2">
+          <div class="p-2">
             <x-application-logo class="block w-auto" />
           </div>
           <div class="md:col-span-5">
