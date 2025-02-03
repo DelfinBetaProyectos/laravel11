@@ -5,3 +5,5 @@
 [x-cloak] {
     display: none;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
